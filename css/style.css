@@ -2289,6 +2289,7 @@ ul.slide--11__right li:last-child {
 }
 
 .slide--13__bottles {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -2329,6 +2330,40 @@ ul.slide--11__right li:last-child {
 }
 .slide--13__bottles img.twelve {
   width: 8.3em;
+}
+
+.slide--13__block .slide--13__bottles::before {
+  content: 'АБО';
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-family: inherit;
+  font-size: 2.45em;
+  color: var(--light-c);
+  z-index: 1;
+}
+.slide--13__block.third .slide--13__bottles::before,
+.slide--13__block.fourth .slide--13__bottles::before,
+.slide--13__block.fifth .slide--13__bottles::before,
+.slide--13__block.eight .slide--13__bottles::before {
+  display: none;
+}
+
+.slide--13__block.first .slide--13__bottles::before {
+  top: 1.5em;
+  left: 8.35em;
+}
+.slide--13__block.second .slide--13__bottles::before {
+  top: -1.25em;
+  left: 6.2em;
+}
+.slide--13__block.sixth .slide--13__bottles::before {
+  top: 1.4em;
+  left: 8.4em;
+}
+.slide--13__block.seventh .slide--13__bottles::before {
+  top: -1.25em;
+  left: 9.8em;
 }
 /*#endregion sl13*/
 
