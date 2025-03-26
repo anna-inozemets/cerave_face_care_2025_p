@@ -207,6 +207,7 @@ function controlTenthSlide() {
     gsap.to($(this).closest('.slide--10__icon').find('p'), { opacity: 1, duration: 0.5, delay: 0.5, x: '0' });
 
     if ($('.slide--10__icon.active').length === 2) {
+      $('.arrows').removeClass('pointer-events');
       nextButtonTimeout = setTimeout(() => {
         $(nextSlideButton).removeClass(hiddenArrowClass);
         $(prevSlideButton).removeClass(hiddenArrowClass);
@@ -311,6 +312,7 @@ const slideActions = {
     nextArrowDelay = 4.9;
   },
   10: () => {
+    $('.arrows').addClass('pointer-events')
     controlTenthSlide();
   },
   11: () => {
